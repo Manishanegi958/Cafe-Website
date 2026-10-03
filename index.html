@@ -1,0 +1,812 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Brew Haven Cafe</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="header">
+    <nav class="navbar">
+
+        <a href="#home" class="logo">
+            <i class="fa-solid fa-mug-hot"></i>
+            Brew Haven
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#reservation">Reservation</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-buttons">
+            <button id="darkModeBtn" title="Dark Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+    </nav>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small-title">WELCOME TO BREW HAVEN</p>
+
+        <h1>
+            Fresh Coffee,
+            <span>Happy Moments.</span>
+        </h1>
+
+        <p>
+            Discover delicious coffee, tasty food and a cozy atmosphere
+            made especially for you.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#menu" class="btn">Explore Menu</a>
+            <a href="#reservation" class="btn btn-outline">
+                Book a Table
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro section">
+
+    <div class="intro-image">
+        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=80"
+             alt="Cafe interior">
+    </div>
+
+    <div class="intro-content">
+
+        <p class="section-subtitle">OUR SPECIAL PLACE</p>
+
+        <h2>A Perfect Place To Relax & Enjoy</h2>
+
+        <p>
+            Brew Haven is a modern cafe where great coffee meets delicious
+            food and a warm atmosphere. Whether you want to meet friends,
+            work peacefully or simply enjoy your favorite drink, we are
+            here to make your experience special.
+        </p>
+
+        <a href="#about" class="text-btn">
+            Discover More <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MENU ================= -->
+
+<section class="menu section" id="menu">
+
+    <div class="section-heading">
+
+        <p class="section-subtitle">OUR MENU</p>
+
+        <h2>Delicious Things For You</h2>
+
+        <p>
+            Fresh ingredients, delicious flavors and carefully prepared
+            dishes.
+        </p>
+
+    </div>
+
+
+    <!-- Filter Buttons -->
+
+    <div class="filter-buttons">
+
+        <button class="filter-btn active" data-filter="all">
+            All
+        </button>
+
+        <button class="filter-btn" data-filter="coffee">
+            Coffee
+        </button>
+
+        <button class="filter-btn" data-filter="food">
+            Fast Food
+        </button>
+
+        <button class="filter-btn" data-filter="dessert">
+            Desserts
+        </button>
+
+        <button class="filter-btn" data-filter="beverage">
+            Beverages
+        </button>
+
+    </div>
+
+
+    <!-- Menu Items -->
+
+    <div class="menu-grid">
+
+        <!-- Coffee -->
+
+        <div class="menu-card" data-category="coffee">
+
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
+                 alt="Cappuccino">
+
+            <div class="menu-info">
+
+                <div class="menu-title">
+                    <h3>Cappuccino</h3>
+                    <span>₹160</span>
+                </div>
+
+                <p>
+                    Rich espresso with steamed milk and creamy foam.
+                </p>
+
+                <button class="order-btn"
+                        data-name="Cappuccino"
+                        data-price="160">
+                    Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card" data-category="coffee">
+
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80"
+                 alt="Latte">
+
+            <div class="menu-info">
+
+                <div class="menu-title">
+                    <h3>Classic Latte</h3>
+                    <span>₹180</span>
+                </div>
+
+                <p>
+                    Smooth espresso blended with warm steamed milk.
+                </p>
+
+                <button class="order-btn"
+                        data-name="Classic Latte"
+                        data-price="180">
+                    Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Fast Food -->
+
+        <div class="menu-card" data-category="food">
+
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+                 alt="Burger">
+
+            <div class="menu-info">
+
+                <div class="menu-title">
+                    <h3>Classic Burger</h3>
+                    <span>₹220</span>
+                </div>
+
+                <p>
+                    Juicy burger with fresh vegetables and special sauce.
+                </p>
+
+                <button class="order-btn"
+                        data-name="Classic Burger"
+                        data-price="220">
+                    Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card" data-category="food">
+
+            <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=600&q=80"
+                 alt="Pizza">
+
+            <div class="menu-info">
+
+                <div class="menu-title">
+                    <h3>Cheese Pizza</h3>
+                    <span>₹280</span>
+                </div>
+
+                <p>
+                    Freshly baked pizza topped with delicious melted cheese.
+                </p>
+
+                <button class="order-btn"
+                        data-name="Cheese Pizza"
+                        data-price="280">
+                    Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Desserts -->
+
+        <div class="menu-card" data-category="dessert">
+
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80"
+                 alt="Chocolate Cake">
+
+            <div class="menu-info">
+
+                <div class="menu-title">
+                    <h3>Chocolate Cake</h3>
+                    <span>₹190</span>
+                </div>
+
+                <p>
+                    Soft chocolate cake with rich creamy chocolate topping.
+                </p>
+
+                <button class="order-btn"
+                        data-name="Chocolate Cake"
+                        data-price="190">
+                    Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card" data-category="dessert">
+
+            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=600&q=80"
+                 alt="Donut">
+
+            <div class="menu-info">
+
+                <div class="menu-title">
+                    <h3>Chocolate Donut</h3>
+                    <span>₹100</span>
+                </div>
+
+                <p>
+                    Soft and delicious donut covered with chocolate glaze.
+                </p>
+
+                <button class="order-btn"
+                        data-name="Chocolate Donut"
+                        data-price="100">
+                    Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Beverages -->
+
+        <div class="menu-card" data-category="beverage">
+
+            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80"
+                 alt="Fresh Juice">
+
+            <div class="menu-info">
+
+                <div class="menu-title">
+                    <h3>Fresh Juice</h3>
+                    <span>₹130</span>
+                </div>
+
+                <p>
+                    Freshly prepared fruit juice packed with natural flavor.
+                </p>
+
+                <button class="order-btn"
+                        data-name="Fresh Juice"
+                        data-price="130">
+                    Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card" data-category="beverage">
+
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80"
+                 alt="Cold Drink">
+
+            <div class="menu-info">
+
+                <div class="menu-title">
+                    <h3>Cold Coffee</h3>
+                    <span>₹170</span>
+                </div>
+
+                <p>
+                    Chilled creamy coffee perfect for refreshing your day.
+                </p>
+
+                <button class="order-btn"
+                        data-name="Cold Coffee"
+                        data-price="170">
+                    Order Now
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about section" id="about">
+
+    <div class="about-content">
+
+        <p class="section-subtitle">ABOUT US</p>
+
+        <h2>More Than Just A Cafe</h2>
+
+        <p>
+            Brew Haven started with a simple idea — create a place where
+            people can enjoy excellent coffee, delicious food and meaningful
+            conversations.
+        </p>
+
+        <p>
+            We carefully select quality ingredients and prepare every item
+            with love. Our comfortable environment makes us the perfect
+            destination for friends, families and coffee lovers.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+                <i class="fa-solid fa-mug-hot"></i>
+                <h3>Fresh Coffee</h3>
+                <p>Freshly brewed every day.</p>
+            </div>
+
+            <div class="feature">
+                <i class="fa-solid fa-leaf"></i>
+                <h3>Quality Food</h3>
+                <p>Fresh and quality ingredients.</p>
+            </div>
+
+            <div class="feature">
+                <i class="fa-solid fa-heart"></i>
+                <h3>Friendly Service</h3>
+                <p>Service with a smile.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="about-image">
+
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80"
+             alt="Coffee">
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery section" id="gallery">
+
+    <div class="section-heading">
+
+        <p class="section-subtitle">OUR GALLERY</p>
+
+        <h2>Moments At Brew Haven</h2>
+
+    </div>
+
+    <div class="gallery-grid">
+
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80"
+             alt="Coffee">
+
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80"
+             alt="Cafe">
+
+        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=700&q=80"
+             alt="Cafe interior">
+
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80"
+             alt="Restaurant">
+
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=80"
+             alt="Dessert">
+
+        <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=700&q=80"
+             alt="Pizza">
+
+    </div>
+
+</section>
+
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="reviews section">
+
+    <div class="section-heading">
+
+        <p class="section-subtitle">CUSTOMER REVIEWS</p>
+
+        <h2>What Our Customers Say</h2>
+
+    </div>
+
+    <div class="review-grid">
+
+        <div class="review-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Amazing coffee and a beautiful atmosphere. I really enjoyed
+                spending time here."
+            </p>
+
+            <h3>— Priya</h3>
+
+        </div>
+
+
+        <div class="review-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "The food was delicious and the service was very friendly.
+                Definitely coming back!"
+            </p>
+
+            <h3>— Rahul</h3>
+
+        </div>
+
+
+        <div class="review-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "Perfect place for coffee, friends and relaxing evenings."
+            </p>
+
+            <h3>— Ananya</h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RESERVATION ================= -->
+
+<section class="reservation section" id="reservation">
+
+    <div class="reservation-content">
+
+        <p class="section-subtitle">RESERVATION</p>
+
+        <h2>Book Your Table</h2>
+
+        <p>
+            Reserve your table and enjoy a wonderful experience at
+            Brew Haven.
+        </p>
+
+    </div>
+
+
+    <form id="reservationForm" class="reservation-form">
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="name">Full Name</label>
+
+                <input type="text"
+                       id="name"
+                       placeholder="Enter your name"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="phone">Phone Number</label>
+
+                <input type="tel"
+                       id="phone"
+                       placeholder="Enter phone number"
+                       required>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="date">Reservation Date</label>
+
+                <input type="date"
+                       id="date"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="time">Reservation Time</label>
+
+                <input type="time"
+                       id="time"
+                       required>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="message">Special Request</label>
+
+            <textarea id="message"
+                      rows="5"
+                      placeholder="Enter your message"></textarea>
+
+        </div>
+
+
+        <button type="submit" class="btn">
+            Reserve Table
+        </button>
+
+        <p id="formMessage"></p>
+
+    </form>
+
+</section>
+
+
+<!-- ================= ORDER MODAL ================= -->
+
+<div class="modal" id="orderModal">
+
+    <div class="modal-content">
+
+        <button class="modal-close" id="closeModal">
+            &times;
+        </button>
+
+        <h2>Place Your Order</h2>
+
+        <p id="selectedItem"></p>
+
+        <form id="orderForm">
+
+            <input type="text"
+                   id="customerName"
+                   placeholder="Your Name"
+                   required>
+
+            <input type="tel"
+                   id="customerPhone"
+                   placeholder="Phone Number"
+                   required>
+
+            <input type="number"
+                   id="quantity"
+                   min="1"
+                   value="1"
+                   required>
+
+            <button type="submit" class="btn">
+                Confirm Order
+            </button>
+
+        </form>
+
+        <p id="orderMessage"></p>
+
+    </div>
+
+</div>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact section" id="contact">
+
+    <div class="contact-box">
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        <h3>Visit Us</h3>
+
+        <p>Kotdwar, Uttarakhand</p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+        <i class="fa-solid fa-phone"></i>
+
+        <h3>Call Us</h3>
+
+        <p>+91 98765 43210</p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        <h3>Email Us</h3>
+
+        <p>hello@brewhaven.com</p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+        <i class="fa-solid fa-clock"></i>
+
+        <h3>Opening Hours</h3>
+
+        <p>10:00 AM - 10:00 PM</p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-about">
+
+            <h2>
+                <i class="fa-solid fa-mug-hot"></i>
+                Brew Haven
+            </h2>
+
+            <p>
+                Good coffee, delicious food and beautiful moments.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#reservation">Reservation</a>
+
+        </div>
+
+
+        <div class="footer-social">
+
+            <h3>Follow Us</h3>
+
+            <div>
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Brew Haven Cafe. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
